@@ -6,17 +6,20 @@ people = 4
 bill = 20000
 
 # 1. How much each person pays, without decimals.
-per_person = None
+per_person = price // people
+print(per_person)
 
 # 2. How many whole bills each person needs.
-bills = None
+bills = per_person // bill
+print(bills)
 
 # 3. How much is left to pay after those bills.
-left_to_pay = None
+left_to_pay = per_person % bill
+print(left_to_pay)
 
 # 4. One sentence with an f-string, exactly like this:
 #    "Each person pays 21250: 1 bill and 1250 left to pay"
-sentence = None
+sentence = f"Each person pays {per_person}: {bills} bill and {left_to_pay} left to pay"
 print(sentence)
 
 
