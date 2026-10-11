@@ -5,6 +5,7 @@ nombre = "Juan Carlos"
 edad = 32
 ciudad = "New York"
 print(nombre, edad, ciudad)
+print(type(nombre))
 
 # --- Tipos ---
 texto = "hola"      # str: texto
