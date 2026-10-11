@@ -1,39 +1,40 @@
-# Clase 6 · Ejercicios de funciones
-# Reemplaza cada "pass" por tu código. Las pruebas de abajo deben imprimir True.
+# Lesson 6 · Exercises: functions
+# Replace each "pass" with your code. The tests at the bottom should print True.
 
 
-# 1. Devuelve cuántas vocales tiene el texto, sin importar mayúsculas.
-def contar_vocales(texto):
+# 1. Return how many vowels the text has, ignoring upper/lower case.
+def count_vowels(text):
     pass
 
 
-# 2. Devuelve "revision" si pasa de 10000, "alto" si pasa de 1000, si no "normal".
-def clasificar(monto):
+# 2. Return "review" if it's over 10000, "high" if it's over 1000, otherwise "normal".
+def classify(amount):
     pass
 
 
-# 3. Recibe una lista y devuelve el diccionario de conteo.
-def contar_frecuencias(lista):
+# 3. Take a list and return a dictionary with how many times each item appears.
+def count_frequencies(items):
     pass
 
 
-# 4. Reto: recibe la lista de reclamos y devuelve el porcentaje de fraude ("no hice").
-def porcentaje_fraude(reclamos):
+# 4. Challenge: take the complaints list and return the fraud percentage
+#    (complaints that contain "didn't make").
+def fraud_percentage(complaints):
     pass
 
 
-# --- Pruebas ---
-print(contar_vocales("Colombia") == 4)
-print(clasificar(7000) == "alto")
-print(clasificar(10000) == "alto")
-print(clasificar(15000) == "revision")
-print(contar_frecuencias(["a", "b", "a"]) == {"a": 2, "b": 1})
+# --- Tests ---
+print(count_vowels("Colombia") == 4)
+print(classify(7000) == "high")
+print(classify(10000) == "high")
+print(classify(15000) == "review")
+print(count_frequencies(["a", "b", "a"]) == {"a": 2, "b": 1})
 
-reclamos = [
-    "Me cobraron dos veces",
-    "La app no abre",
-    "Hay una compra que no hice",
-    "me COBRARON dos veces otra vez",
-    "Quiero cambiar mi dirección",
+complaints = [
+    "They charged me twice",
+    "The app won't open",
+    "There's a purchase I didn't make",
+    "they CHARGED me twice again",
+    "I want to change my address",
 ]
-print(porcentaje_fraude(reclamos) == 20.0)
+print(fraud_percentage(complaints) == 20.0)

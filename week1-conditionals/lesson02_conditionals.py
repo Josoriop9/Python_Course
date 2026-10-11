@@ -1,33 +1,40 @@
-# Clase 2 · Decisiones con if / elif / else
+# Lesson 2 · Decisions with if / elif / else
 
-# --- Comparaciones: dan True o False ---
-edad = 32
-print(edad > 30)    # True
-print(edad == 40)   # False (== compara, = guarda)
-print(edad != 40)   # True (distinto)
-print(edad >= 32)   # True
+# --- Comparisons: they give True or False ---
+age = 32
+print(age > 30)    # True
+print(age == 40)   # False (== compares, = stores)
+print(age != 40)   # True (not equal)
+print(age >= 32)   # True
 
 # --- if / else ---
-if edad >= 40:
-    print("Ya tienes 40 o más")
+if age >= 40:
+    print("You're 40 or older")
 else:
-    print(f"Te faltan {40 - edad} años para los 40")
+    print(f"{40 - age} years to go until 40")
 
-# --- if / elif / else: entra solo en el primero que se cumple ---
-tasa = 43
-if tasa >= 40:
-    print("Excelente")
-elif tasa >= 30:
-    print("Bien")
+# --- if / elif / else: only the first match runs ---
+rate = 43
+if rate >= 40:
+    print("Excellent")
+elif rate >= 30:
+    print("Good")
 else:
-    print("Alerta")
+    print("Warning")
 
 # --- and / not ---
-ahorro = 94000
-gastos = 6000
-if ahorro > 50000 and gastos < 7000:
-    print("Vas muy bien")
+savings = 94000
+expenses = 6000
+if savings > 50000 and expenses < 7000:
+    print("You're doing great")
 
-tiene_visa = False
-if not tiene_visa:
-    print("Falta la visa")
+has_visa = False
+if not has_visa:
+    print("Visa missing")
+
+# --- Even or odd with % ---
+number = 7
+if number % 2 == 0:
+    print("even")
+else:
+    print("odd")

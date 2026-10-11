@@ -1,27 +1,27 @@
-# Clase 3 · Ejercicio: análisis de ahorros
+# Lesson 3 · Exercise: savings analysis
 
-ahorros = [4600, 5200, 3900, 4800, 6100, 4400]
+savings = [4600, 5200, 3900, 4800, 6100, 4400]
 
-# 1. Total (acumulador)
+# 1. Total (accumulator)
 total = 0
-for ahorro in ahorros:
-    total = total + ahorro
+for amount in savings:
+    total = total + amount
 print(f"Total: {total}")
 
-# 2. Promedio
-promedio = total / len(ahorros)
-print(f"Promedio: {round(promedio, 1)}")
+# 2. Average
+average = total / len(savings)
+print(f"Average: {round(average, 1)}")
 
-# 3. Meses bajos (contador)
-meses_bajos = 0
-for ahorro in ahorros:
-    if ahorro < 4500:
-        meses_bajos = meses_bajos + 1
-print(f"Meses bajos: {meses_bajos}")
+# 3. Low months (counter)
+low_months = 0
+for amount in savings:
+    if amount < 4500:
+        low_months = low_months + 1
+print(f"Low months: {low_months}")
 
-# 4. Mejor mes sin max() (campeón)
-mejor = ahorros[0]
-for ahorro in ahorros:
-    if ahorro > mejor:
-        mejor = ahorro
-print(f"Mejor mes: {mejor}")
+# 4. Best month without max() (champion)
+best = savings[0]
+for amount in savings:
+    if amount > best:
+        best = amount
+print(f"Best month: {best}")

@@ -1,53 +1,53 @@
-# Calentamiento · contador y acumulador con condición
+# Warm-ups · counter and accumulator with a condition
 
-numeros = [3, 8, 1, 9, 4]
+numbers = [3, 8, 1, 9, 4]
 
-# Contador: cuántos pasan de 5 -> 2
-mayores = 0
-for numero in numeros:
-    if numero > 5:
-        mayores = mayores + 1
-print(mayores)
+# Counter: how many are over 5 -> 2
+over_five = 0
+for number in numbers:
+    if number > 5:
+        over_five = over_five + 1
+print(over_five)
 
-# Acumulador: suma total -> 25
-suma = 0
-for numero in numeros:
-    suma = suma + numero
-print(suma)
+# Accumulator: total sum -> 25
+total = 0
+for number in numbers:
+    total = total + number
+print(total)
 
-# Acumulador con condición: suma de los que pasan de 5 -> 17
-suma_mayores = 0
-for numero in numeros:
-    if numero > 5:
-        suma_mayores = suma_mayores + numero
-print(suma_mayores)
+# Accumulator with a condition: sum of those over 5 -> 17
+total_over_five = 0
+for number in numbers:
+    if number > 5:
+        total_over_five = total_over_five + number
+print(total_over_five)
 
-palabras = ["sol", "casa", "mar", "ventana"]
+words = ["sun", "house", "sea", "window"]
 
-# Cuántas palabras tienen más de 3 letras -> 2
-largas = 0
-for palabra in palabras:
-    if len(palabra) > 3:
-        largas = largas + 1
-print(largas)
+# How many words have more than 3 letters -> 2
+long_words = 0
+for word in words:
+    if len(word) > 3:
+        long_words = long_words + 1
+print(long_words)
 
-# Total de letras -> 17
-letras = 0
-for palabra in palabras:
-    letras = letras + len(palabra)
-print(letras)
+# Total letters -> 17
+letters = 0
+for word in words:
+    letters = letters + len(word)
+print(letters)
 
-frases = ["hola mundo", "yo amo python mucho", "buenos dias"]
+phrases = ["hello world", "i really love python", "good morning"]
 
-# Cuántas frases tienen más de 2 palabras -> 1
-frases_largas = 0
-for frase in frases:
-    if len(frase.split()) > 2:
-        frases_largas = frases_largas + 1
-print(frases_largas)
+# How many phrases have more than 2 words -> 1
+long_phrases = 0
+for phrase in phrases:
+    if len(phrase.split()) > 2:
+        long_phrases = long_phrases + 1
+print(long_phrases)
 
-# Total de palabras -> 8
-total_palabras = 0
-for frase in frases:
-    total_palabras = total_palabras + len(frase.split())
-print(total_palabras)
+# Total words -> 8
+total_words = 0
+for phrase in phrases:
+    total_words = total_words + len(phrase.split())
+print(total_words)

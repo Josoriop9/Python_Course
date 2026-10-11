@@ -1,42 +1,44 @@
-# Clase 4 · Textos
+# Lesson 4 · Strings
 
-palabra = "python"
-print(palabra[0])     # p
-print(palabra[-1])    # n
-print(len(palabra))   # 6
+word = "python"
+print(word[0])     # p
+print(word[-1])    # n
+print(len(word))   # 6
 
-# --- Un texto se recorre como una lista de letras ---
-for letra in "oso":
-    print(letra)
+# --- A string can be looped like a list of letters ---
+for letter in "wow":
+    print(letter)
 
-# --- Rebanadas [inicio:fin:paso]: el fin no entra ---
-print(palabra[0:3])   # pyt
-print(palabra[2:])    # thon
-print(palabra[::-1])  # nohtyp, invertido
+# --- Slices [start:end:step]: end is not included ---
+print(word[0:3])   # pyt
+print(word[2:])    # thon
+print(word[::-1])  # nohtyp, reversed
 
-# --- Métodos ---
-frase = "  Hola Mundo  "
-print(frase.lower())           # "  hola mundo  "
-print(frase.strip())           # "Hola Mundo"
-print(frase.replace(" ", ""))  # "HolaMundo"
-print("banana".count("a"))     # 3
+# --- Methods ---
+phrase = "  Hello World  "
+print(phrase.lower())           # "  hello world  "
+print(phrase.strip())           # "Hello World"
+print(phrase.replace(" ", ""))  # "HelloWorld"
+print("banana".count("a"))      # 3
 
-# --- in: ¿está adentro? ---
-print("a" in "casa")  # True
-print("x" in "casa")  # False
+# --- in: is it inside? ---
+print("a" in "cat")  # True
+print("x" in "cat")  # False
 
-# --- split y join ---
-palabras = "yo amo python".split()   # ['yo', 'amo', 'python']
-print(palabras)
-print(" ".join(palabras))            # yo amo python
+# --- split and join ---
+words = "i love python".split()   # ['i', 'love', 'python']
+print(words)
+print(" ".join(words))            # i love python
 
-# split devuelve textos: para sumar, int()
-partes = "3,8,1".split(",")
-print(int(partes[0]) + int(partes[1]))  # 11
+# split returns text: use int() to add
+parts = "3,8,1".split(",")
+print(int(parts[0]) + int(parts[1]))  # 11
 
-# --- Construir un texto con un for ---
-invertido = ""
-for letra in "casa":
-    invertido = letra + invertido
-print(invertido)            # asac
-print(invertido == "casa")  # False
+# --- Build a string with a for loop ---
+reversed_text = ""
+for letter in "house":
+    reversed_text = letter + reversed_text
+print(reversed_text)              # esuoh
+
+# --- Break something on purpose (remove the # to see the error) ---
+# word[0] = "P"   # TypeError: strings can't be changed in place

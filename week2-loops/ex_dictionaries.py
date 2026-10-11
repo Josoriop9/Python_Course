@@ -1,34 +1,34 @@
-# Clase 5 · Ejercicios de diccionarios
+# Lesson 5 · Exercises: dictionaries
 
-# Nivel 1 · Mi ficha
-perfil = {"nombre": "Juan Carlos", "ciudad": "NY", "experiencia": 12}
-print(f"Hola, soy {perfil['nombre']}, vivo en {perfil['ciudad']} "
-      f"y tengo {perfil['experiencia']} años de experiencia")
+# Level 1 · My profile
+profile = {"name": "Juan Carlos", "city": "NY", "experience": 12}
+print(f"Hi, I'm {profile['name']}, I live in {profile['city']} "
+      f"and I have {profile['experience']} years of experience")
 
-casos = [
-    {"reclamo": "Me cobraron dos veces", "esperado": "cobro_duplicado"},
-    {"reclamo": "La app no abre", "esperado": "app_caida"},
-    {"reclamo": "Hay una compra que no hice", "esperado": "fraude"},
-    {"reclamo": "Fui cobrado em dobro", "esperado": "cobro_duplicado"},
+cases = [
+    {"complaint": "They charged me twice", "expected": "duplicate_charge"},
+    {"complaint": "The app won't open", "expected": "app_down"},
+    {"complaint": "There's a purchase I didn't make", "expected": "fraud"},
+    {"complaint": "I was charged double", "expected": "duplicate_charge"},
 ]
 
-# Nivel 2 · Imprimir solo los reclamos
-for caso in casos:
-    print(caso["reclamo"])
+# Level 2 · Print only the complaints
+for case in cases:
+    print(case["complaint"])
 
-# Nivel 3 · Contar cobros duplicados -> 2
-cobros = 0
-for caso in casos:
-    if caso["esperado"] == "cobro_duplicado":
-        cobros = cobros + 1
-print(cobros)
+# Level 3 · Count duplicate charges -> 2
+duplicates = 0
+for case in cases:
+    if case["expected"] == "duplicate_charge":
+        duplicates = duplicates + 1
+print(duplicates)
 
-# Nivel 4 · Frecuencia de cada categoría
-conteo = {}
-for caso in casos:
-    categoria = caso["esperado"]
-    if categoria in conteo:
-        conteo[categoria] = conteo[categoria] + 1
+# Level 4 · Frequency of each category
+counts = {}
+for case in cases:
+    category = case["expected"]
+    if category in counts:
+        counts[category] = counts[category] + 1
     else:
-        conteo[categoria] = 1
-print(conteo)   # {'cobro_duplicado': 2, 'app_caida': 1, 'fraude': 1}
+        counts[category] = 1
+print(counts)   # {'duplicate_charge': 2, 'app_down': 1, 'fraud': 1}

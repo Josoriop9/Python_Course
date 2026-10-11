@@ -1,14 +1,14 @@
-# Clase 1 · Ejercicio: meta de ahorro
+# Lesson 1 · Exercise: savings goal
 
-ingreso_mensual = 10600
-gastos_mensuales = 6000
-ahorro_actual = 94000
-meta = 150000
+monthly_income = 10600
+monthly_expenses = 6000
+current_savings = 94000
+goal = 150000
 
-ahorro_mensual = ingreso_mensual - gastos_mensuales
-meses_necesarios = (meta - ahorro_actual) / ahorro_mensual
-porcentaje_ahorrado = (ahorro_actual / meta) * 100
+monthly_savings = monthly_income - monthly_expenses
+months_needed = (goal - current_savings) / monthly_savings
+percent_saved = (current_savings / goal) * 100
 
-print(f"Tu ahorro mensual es: {ahorro_mensual}")
-print(f"Meses necesarios para alcanzar la meta: {round(meses_necesarios)}")
-print(f"Porcentaje ahorrado: {round(porcentaje_ahorrado, 2)}%")
+print(f"Monthly savings: {monthly_savings}")
+print(f"Months needed to reach the goal: {round(months_needed)}")
+print(f"Percent saved: {round(percent_saved, 2)}%")

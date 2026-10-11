@@ -1,9 +1,9 @@
-# LeetCode · Valid Palindrome (versión simplificada)
+# LeetCode · Valid Palindrome (simplified)
 
-def es_palindromo(texto):
-    limpio = texto.lower().replace(" ", "")
-    return limpio == limpio[::-1]
+def is_palindrome(text):
+    clean = text.lower().replace(" ", "")
+    return clean == clean[::-1]
 
-print(es_palindromo("Anita lava la tina"))  # True
-print(es_palindromo("casa"))                # False
-print(es_palindromo(""))                    # True
+print(is_palindrome("A man a plan a canal Panama"))  # True
+print(is_palindrome("house"))                        # False
+print(is_palindrome(""))                             # True

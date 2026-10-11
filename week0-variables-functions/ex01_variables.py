@@ -1,27 +1,27 @@
-# Lección 1 · Ejercicios de variables y operaciones
-# Reemplaza cada None por tu código. Las pruebas de abajo deben imprimir True.
+# Lesson 1 · Exercises: variables and operations
+# Replace each None with your code. The tests at the bottom should print True.
 
-precio = 85000
-personas = 4
-billete = 20000
+price = 85000
+people = 4
+bill = 20000
 
-# 1. Cuánto paga cada persona, sin decimales.
-por_persona = None
+# 1. How much each person pays, without decimals.
+per_person = None
 
-# 2. Cuántos billetes completos necesita cada uno.
-billetes = None
+# 2. How many whole bills each person needs.
+bills = None
 
-# 3. Cuánto le falta después de esos billetes.
-falta = None
+# 3. How much is left to pay after those bills.
+left_to_pay = None
 
-# 4. Una sola frase con f-string, por ejemplo:
-#    "Cada uno paga 21250: 1 billete y faltan 1250"
-frase = None
-print(frase)
+# 4. One sentence with an f-string, exactly like this:
+#    "Each person pays 21250: 1 bill and 1250 left to pay"
+sentence = None
+print(sentence)
 
 
-# --- Pruebas ---
-print(por_persona == 21250)
-print(billetes == 1)
-print(falta == 1250)
-print(frase == "Cada uno paga 21250: 1 billete y faltan 1250")
+# --- Tests ---
+print(per_person == 21250)
+print(bills == 1)
+print(left_to_pay == 1250)
+print(sentence == "Each person pays 21250: 1 bill and 1250 left to pay")

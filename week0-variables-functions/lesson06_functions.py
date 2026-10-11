@@ -1,64 +1,64 @@
-# Clase 6 · Funciones
+# Lesson 6 · Functions
 
 
-# --- 1. Definir y llamar ---
-def saludar():
-    print("Hola, Juan Carlos")
+# --- 1. Define and call ---
+def greet():
+    print("Hello, Juan Carlos")
 
-saludar()
-saludar()
-
-
-# --- 2. Parámetros: los datos que recibe ---
-def saludar_a(nombre):
-    print(f"Hola, {nombre}")
-
-saludar_a("Ana")
-saludar_a("Marcelo")
+greet()
+greet()
 
 
-# --- 3. print contra return ---
-def doble_print(numero):
-    print(numero * 2)       # muestra, pero no entrega nada (devuelve None)
+# --- 2. Parameters: the data it receives ---
+def greet_person(name):
+    print(f"Hello, {name}")
 
-def doble_return(numero):
-    return numero * 2       # entrega el valor para seguir usándolo
-
-resultado = doble_return(5)
-print(resultado + 1)        # 11
-
-r = doble_print(3)          # imprime 6
-print(r)                    # None: sin return, la función devuelve None
+greet_person("Ana")
+greet_person("Marcelo")
 
 
-# --- 4. Un ejercicio convertido en función ---
-def es_palindromo(texto):
-    limpio = texto.lower().replace(" ", "")
-    return limpio == limpio[::-1]
+# --- 3. print vs return ---
+def double_print(number):
+    print(number * 2)       # shows it, but hands nothing back (returns None)
 
-print(es_palindromo("Anita lava la tina"))  # True
-print(es_palindromo("casa"))                # False
+def double_return(number):
+    return number * 2       # hands the value back so you can keep using it
+
+result = double_return(5)
+print(result + 1)           # 11
+
+r = double_print(3)         # prints 6
+print(r)                    # None: without return, a function returns None
 
 
-# --- 5. Varios parámetros, y return termina la función ---
-def clasificar(monto, limite_alto):
-    if monto > limite_alto:
-        return "revision"
+# --- 4. An exercise turned into a function ---
+def is_palindrome(text):
+    clean = text.lower().replace(" ", "")
+    return clean == clean[::-1]
+
+print(is_palindrome("A man a plan a canal Panama"))  # True
+print(is_palindrome("house"))                        # False
+
+
+# --- 5. Several parameters, and return ends the function ---
+def classify(amount, high_limit):
+    if amount > high_limit:
+        return "review"
     return "normal"
 
-print(clasificar(15000, 10000))  # revision
+print(classify(15000, 10000))  # review
 
 
-# --- 6. Rompe algo a propósito (quita el # para ver el error) ---
-def sumar(a, b):
+# --- 6. Break something on purpose (remove the # to see the error) ---
+def add(a, b):
     return a + b
 
-# sumar(3)   # TypeError: falta un argumento
+# add(3)   # TypeError: missing 1 required positional argument
 
 
-# --- 7. Lo que pasa dentro, se queda dentro ---
-def calcular():
+# --- 7. What happens inside, stays inside ---
+def calculate():
     total = 100
 
-calcular()
-# print(total)   # NameError: total solo existe dentro de la función
+calculate()
+# print(total)   # NameError: total only exists inside the function

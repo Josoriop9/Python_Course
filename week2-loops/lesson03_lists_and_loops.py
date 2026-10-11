@@ -1,37 +1,43 @@
-# Clase 3 · Listas y ciclos for
+# Lesson 3 · Lists and for loops
 
-# --- Listas: las posiciones empiezan en 0 ---
-ahorros = [4600, 5200, 3900, 4800]
-print(ahorros)
-print(len(ahorros))  # 4
-print(ahorros[0])    # 4600, el primero
-print(ahorros[-1])   # 4800, el último
+# --- Lists: positions start at 0 ---
+savings = [4600, 5200, 3900, 4800]
+print(savings)
+print(len(savings))  # 4
+print(savings[0])    # 4600, the first one
+print(savings[-1])   # 4800, the last one
 
-ahorros.append(6100)  # agrega al final
-ahorros[0] = 4700     # cambia el primero
-print(ahorros)
+savings.append(6100)  # adds to the end
+savings[0] = 4700     # changes the first one
+print(savings)
 
-# --- for: recorre uno por uno ---
-for ahorro in ahorros:
-    print(ahorro)
+# --- for: goes through them one by one ---
+for amount in savings:
+    print(amount)
 
-# --- Acumulador: sumo valores ---
+# --- Accumulator: add up values ---
 total = 0
-for ahorro in ahorros:
-    total = total + ahorro
+for amount in savings:
+    total = total + amount
 print(total)
 
-# --- Contador: sumo 1 cuando se cumple algo ---
-meses_altos = 0
-for ahorro in ahorros:
-    if ahorro > 5000:
-        meses_altos = meses_altos + 1
-print(meses_altos)
+# --- Counter: add 1 when something is true ---
+high_months = 0
+for amount in savings:
+    if amount > 5000:
+        high_months = high_months + 1
+print(high_months)
 
-# --- range: el último no entra ---
-for mes in range(2, 13, 2):
-    print(f"Mes {mes}")   # 2, 4, 6, 8, 10, 12
+# --- Champion: keep the best so far ---
+best = savings[0]
+for amount in savings:
+    if amount > best:
+        best = amount
+print(best)
 
-for mes in range(1, 13):
-    if mes % 2 == 0:
-        print(mes)        # los pares
+# --- range: the last number is not included ---
+for month in range(2, 13, 2):
+    print(f"Month {month}")   # 2, 4, 6, 8, 10, 12
+
+# --- Break something on purpose (remove the # to see the error) ---
+# print(savings[10])   # IndexError: that position doesn't exist

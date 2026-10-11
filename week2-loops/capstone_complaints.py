@@ -1,55 +1,55 @@
-# Integrador · Reclamos bancarios (clases 1 a 4)
+# Capstone · Bank complaints (lessons 1 to 4)
 
-reclamos = [
-    "Me cobraron dos veces",
-    "La app no abre",
-    "Hay una compra que no hice",
-    "me COBRARON dos veces otra vez",
-    "Quiero cambiar mi dirección",
+complaints = [
+    "They charged me twice",
+    "The app won't open",
+    "There's a purchase I didn't make",
+    "they CHARGED me twice again",
+    "I want to change my address",
 ]
 
-# Reclamos con más de 4 palabras -> 2
-largos = 0
-for reclamo in reclamos:
-    if len(reclamo.split()) > 4:
-        largos = largos + 1
-print(largos)
+# Complaints with more than 4 words -> 3
+long_complaints = 0
+for complaint in complaints:
+    if len(complaint.split()) > 4:
+        long_complaints = long_complaints + 1
+print(long_complaints)
 
-# Parte 3 · Cuántos mencionan "cobraron", sin importar mayúsculas -> 2
-cobros = 0
-for reclamo in reclamos:
-    if "cobraron" in reclamo.lower():
-        cobros = cobros + 1
-print(cobros)
+# Part 3 · How many mention "charged", ignoring case -> 2
+charged = 0
+for complaint in complaints:
+    if "charged" in complaint.lower():
+        charged = charged + 1
+print(charged)
 
-# Parte 4 · El reclamo más largo (campeón)
-mas_largo = reclamos[0]
-for reclamo in reclamos:
-    if len(reclamo) > len(mas_largo):
-        mas_largo = reclamo
-print(mas_largo)
+# Part 4 · The longest complaint (champion)
+longest = complaints[0]
+for complaint in complaints:
+    if len(complaint) > len(longest):
+        longest = complaint
+print(longest)
 
-# Parte 5 · Categoría de cada reclamo
-for reclamo in reclamos:
-    texto = reclamo.lower()
-    if "cobraron" in texto:
-        categoria = "cobro_duplicado"
-    elif "no hice" in texto:
-        categoria = "fraude"
-    elif "app" in texto:
-        categoria = "app_caida"
+# Part 5 · Category for each complaint
+for complaint in complaints:
+    text = complaint.lower()
+    if "charged" in text:
+        category = "duplicate_charge"
+    elif "didn't make" in text:
+        category = "fraud"
+    elif "app" in text:
+        category = "app_down"
     else:
-        categoria = "otro"
-    print(f"{reclamo} -> {categoria}")
+        category = "other"
+    print(f"{complaint} -> {category}")
 
-# Parte 6 · Porcentaje de fraude y alerta -> 20%
-fraudes = 0
-for reclamo in reclamos:
-    if "no hice" in reclamo.lower():
-        fraudes = fraudes + 1
-total_reclamos = len(reclamos)
-porcentaje_fraude = fraudes / total_reclamos * 100
-if porcentaje_fraude > 15:
-    print(f"Alerta de fraude: {round(porcentaje_fraude)}%")
+# Part 6 · Fraud percentage and alert -> 20%
+frauds = 0
+for complaint in complaints:
+    if "didn't make" in complaint.lower():
+        frauds = frauds + 1
+total_complaints = len(complaints)
+fraud_percentage = frauds / total_complaints * 100
+if fraud_percentage > 15:
+    print(f"Fraud alert: {round(fraud_percentage)}%")
 else:
-    print(f"Todo bien: {round(porcentaje_fraude)}%")
+    print(f"All good: {round(fraud_percentage)}%")

@@ -1,38 +1,38 @@
-# Clase 5 · Diccionarios
+# Lesson 5 · Dictionaries
 
-# --- Una ficha con cajones: llave -> valor ---
-cliente = {"nombre": "Banco Andino", "pais": "CO", "empleados": 10000}
-print(cliente["nombre"])       # Banco Andino
+# --- A card with labeled drawers: key -> value ---
+client = {"name": "Andes Bank", "country": "CO", "employees": 10000}
+print(client["name"])        # Andes Bank
 
-# --- Agregar y cambiar ---
-cliente["sector"] = "banca"    # no existía: la crea
-cliente["empleados"] = 12000   # ya existía: la reemplaza
+# --- Add and change ---
+client["sector"] = "banking"   # didn't exist: creates it
+client["employees"] = 12000    # already existed: replaces it
 
-# --- Cajones que no existen ---
-# print(cliente["telefono"])   # KeyError
-print(cliente.get("telefono", "no registrado"))
+# --- Keys that don't exist ---
+# print(client["phone"])   # KeyError
+print(client.get("phone", "not registered"))
 
-# --- ¿Existe el cajón? ---
-print("pais" in cliente)       # True
+# --- Does the key exist? ---
+print("country" in client)   # True
 
-# --- Recorrer: dos variables por vuelta ---
-for llave, valor in cliente.items():
-    print(f"{llave}: {valor}")
+# --- Loop: two variables per turn ---
+for key, value in client.items():
+    print(f"{key}: {value}")
 
-# --- Lista de diccionarios ---
-casos = [
-    {"reclamo": "Me cobraron dos veces", "esperado": "cobro_duplicado"},
-    {"reclamo": "La app no abre", "esperado": "app_caida"},
+# --- List of dictionaries ---
+cases = [
+    {"complaint": "They charged me twice", "expected": "duplicate_charge"},
+    {"complaint": "The app won't open", "expected": "app_down"},
 ]
-for caso in casos:
-    print(caso["reclamo"])
+for case in cases:
+    print(case["complaint"])
 
-# --- Patrón: contar frecuencias ---
-frutas = ["mango", "pera", "mango"]
-conteo = {}
-for fruta in frutas:
-    if fruta in conteo:
-        conteo[fruta] = conteo[fruta] + 1   # ya existe: le sumo 1
+# --- Pattern: frequency count ---
+fruits = ["mango", "pear", "mango"]
+counts = {}
+for fruit in fruits:
+    if fruit in counts:
+        counts[fruit] = counts[fruit] + 1   # exists: add 1
     else:
-        conteo[fruta] = 1                   # no existe: lo creo en 1
-print(conteo)   # {'mango': 2, 'pera': 1}
+        counts[fruit] = 1                   # doesn't exist: create it at 1
+print(counts)   # {'mango': 2, 'pear': 1}
